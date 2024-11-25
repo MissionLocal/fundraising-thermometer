@@ -4,15 +4,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body onload="CountDownTimer('01/01/2025 00:01 AM', 'countdown')">
+<body>
 
-  <div id='countdown-wrap'>
+  <div id='wrap'>
 
+    <!-- progress bar -->
     <div id="glass">
       <div id="progress">
       </div>
     </div>
 
+    <!-- raised amount and target amount -->
     <div class="goal-stat-container">
       <div class="goal-stat">
         <span class="goal-number" id="raised" style="float: left;"></span>
@@ -27,9 +29,7 @@
       </div>
     </div>
 
-    <div id="copy">
-    </div>
-
+    <!-- donate button -->
     <div class='donate-button-container'>
       <a target="_blank" href="https://missionlocal.org/support-our-publication/">
         <button class="btn">Double my gift</button>
@@ -44,33 +44,12 @@ var pymChild = new pym.Child();
 
 // STUFF WE NEED TO CHANGE
 // set the amount you've raised here
-// Last updated: Nov. 20, 2024
+// Last updated: Nov. 25, 2024
 
-var raised = 88018.00 // funds raised
+var raised = 95318.00 // funds raised
 
 // set the goal here
 var goal = 200000
-
-// set countdown function
-    function CountDownTimer(dt, id)
-    {
-        var end = new Date(dt);
-
-        var _second = 1000;
-        var _minute = _second * 60;
-        var _hour = _minute * 60;
-        var _day = _hour * 24;
-
-        function showRemaining() {
-            var now = new Date();
-            console.log(now)
-            var distance = end - now;
-            var days = Math.floor(distance / _day);
-            document.getElementById(id).innerHTML = days;
-        }
-
-        timer = setInterval(showRemaining, 1 * 1000);
-    }
 
 // define funded
 var funded = (raised / goal) * 100
@@ -85,18 +64,11 @@ var formatter = new Intl.NumberFormat('en-US', {
 // update document
 document.getElementById("goal").innerHTML = formatter.format(goal);
 document.getElementById("raised").innerHTML = formatter.format(raised);
-document.getElementById("funded").innerHTML = parseFloat(funded).toFixed(0)+"%";
 document.getElementById("progress").style.width = parseFloat(funded).toFixed(0)+"%";
-
-// delay for a bit
-function delay(time) {
-	return new Promise(resolve => setTimeout(resolve, time));
-}
-delay(500).then(() => pymChild.sendHeight());
 
 </script>
 
-<!-- With many thanks to Robot Balloon for their original code: https://codepen.io/robotballoon/pen/Fjnyp and to Will Jarrett for making this prototype back in 2022! -->
+<!-- With many thanks to Robot Balloon for their original code: https://codepen.io/robotballoon/pen/Fjnyp and to Will Jarrett for making the prototype back in 2022! -->
 
 </body>
 </html>

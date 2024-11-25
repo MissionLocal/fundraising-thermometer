@@ -4,30 +4,7 @@
     font-weight: bold;
 }
 
-#first-graf, #middle-graf, #last-graf {
-    text-align: left;
-}
-
-#first-graf { 
-    margin: 16px auto 8px auto; 
-}
-
-#middle-graf { 
-    margin: 8px auto 8px auto; 
-}
-
-#last-graf { 
-    margin: 8px auto 16px auto; 
-}
-
-
-
-#title {
-    text-align: left;
-    color: rgb(0, 0, 0);
-}
-
-#countdown-wrap {
+#wrap {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -54,7 +31,6 @@
     }
 }
 
-
 #glass {
     width: 100%;
     height: 20px;
@@ -66,10 +42,9 @@
 
 #progress {
     float: left;
-    width: 33%;
+    width: 50%;
     height: 20px;
     background: #558fff;
-    z-index: 333;
     border-radius: 5px;
 }
 
