@@ -12,7 +12,8 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    background-color: #DCE6F0;
+    background-color: #F7B4684D;
+    /* background-color: #DCE6F0; */
 }
 
 @media only screen and (min-width : 500px) {
