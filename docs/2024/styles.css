@@ -90,7 +90,7 @@ font-weight: bold;
     max-width: 200px;
     width: 100%;
     margin: auto;
-    display: flex;
+    display: none; /* Change to block display to flex to show donate button */
     flex-direction: column;
     align-items: center;
 }
