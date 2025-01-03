@@ -71,7 +71,7 @@
 }
 
 .goal-number, .goal-label {
-display: block;
+display: flex;
 }
 
 .goal-number {
